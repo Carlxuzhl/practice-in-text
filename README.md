@@ -125,8 +125,8 @@ booked as audit), so the screenshot budget of each method can be checked from th
 ## The aligned reader
 
 The study's aligned reader (the LoRA adapter of step 4, trained on the 2,004 calibration screenshots) is released on
-the Hugging Face Hub under CC BY-NC 4.0 (link to be added). To use it without training, merge it into the base reader
-and serve the merged directory as the reader:
+the Hugging Face Hub under CC BY-NC 4.0: https://huggingface.co/xuzhl/practice-in-text-aligned-reader. To use it
+without training, merge it into the base reader and serve the merged directory as the reader:
 
 ```bash
 $GPU_PY -m reader.merge_lora --base $MODELS_DIR/Qwen3-VL-4B-Instruct --adapter <downloaded adapter> --out $WORK_DIR/models/aligned_reader
