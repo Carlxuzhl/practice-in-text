@@ -21,11 +21,13 @@ screenshots through the original reader.
 | `practice/` | Corrupted practice environments: generic noise, and noise matched to the reader's error rates |
 | `policy/` | The episode runner (text view, real pipeline, noise, program oracles); the policy prompt; the 29 program oracles; collecting judge-accepted episodes; LoRA training; picking episodes by screenshot budget |
 | `evaluation/` | The paired bootstrap over templates and the fixed wording rules |
+| `androidcontrol/` | Optional: the text view of AndroidControl screens and the two reader-side measurements on it (scripts only, no data) |
 | `configs/` | Model revisions, reader and policy settings, LoRA hyperparameters, templates and instance seeds, path variables |
 | `scripts/` | MobileGym setup, model download, model servers, the step-by-step reproduction, a smoke test |
 | `tests/` | Small CPU tests |
 
-Not included: model weights, MobileGym itself and anything generated from it (screenshots, text views, labels), the
+Not included: model weights, MobileGym itself and anything generated from it (screenshots, text views, labels),
+AndroidControl's data, the
 scripts that made the paper's tables and figures, and some secondary analyses (the element-replay simulator and the
 gap decomposition, the look-up reader, the same-label adaptation baseline).
 
@@ -129,6 +131,22 @@ and serve the merged directory as the reader:
 ```bash
 $GPU_PY -m reader.merge_lora --base $MODELS_DIR/Qwen3-VL-4B-Instruct --adapter <downloaded adapter> --out $WORK_DIR/models/aligned_reader
 ```
+
+## AndroidControl (optional)
+
+`androidcontrol/` repeats the two reader-side measurements on AndroidControl, offline recordings of people using real
+Android apps: whether misreads recur on the same elements, and how much alignment lowers the element error rate on
+held-out screenshots. The text view comes from each step's accessibility tree, with every element checked against the
+screenshot so that only visible content remains; unlike MobileGym's it has no colours and no icon names, and it leaves
+out keyboards and web views. The reader, its prompt, the parser, the matching and the alignment recipe are MobileGym's.
+
+The data is not included. `bash androidcontrol/download.sh` fetches the split files and shards 0-3 of the training data
+(about 10 GB) from the public bucket into `$ANDROIDCONTROL_DIR/raw` and checks their md5; check the dataset's licence
+first. Then run `scripts/reproduce/07_androidcontrol.sh` (sampling on the CPU, one GPU for reading and alignment). The
+pixel checks need numpy and the font DejaVu Sans (`AC_FONT`, default `/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf`).
+
+In the paper's supplement, misreads recurred 23.5 points more often than independent errors (the line was met), and
+alignment lowered the element error rate from 36.68% to 27.45%, a relative drop of 25.2%, short of the 30% line.
 
 ## Run directories
 
