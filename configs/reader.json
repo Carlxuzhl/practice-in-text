@@ -1,0 +1,9 @@
+{
+ "note": "Screen reader settings. The aligned reader uses exactly these; only its weights differ.",
+ "call": {"scale": 0.5, "temperature": 0.0, "repetition_penalty": 1.05, "max_tokens": 4096, "seed": 0, "timeout_s": 900},
+ "server": {"served_model_name": "reader", "max_model_len": 12288, "dtype": "bfloat16", "seed": 0,
+            "limit_mm_per_prompt": {"image": 1},
+            "gpu_memory_utilization": {"beside_policy": 0.35, "alone": 0.85}},
+ "acceptance": {"misread_reduction_at_least": 0.30, "unparsable_at_most": 0.01},
+ "recurrence": {"status_bar_y2": 45, "max_extras": 60, "threshold_points": 20, "bootstrap": 1000, "workers": 4}
+}

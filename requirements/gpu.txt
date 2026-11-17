@@ -1,0 +1,10 @@
+# The GPU side: serving the reader and the policy (vLLM), LoRA training and merging (Python 3.11, CUDA 12.8).
+# Versions as used in the study; vLLM 0.19.1 is built on torch 2.10.0.
+vllm==0.19.1
+transformers==5.22.1
+peft==0.21.2
+accelerate==1.15.0
+qwen-vl-utils==0.0.14
+huggingface_hub==2.4.0
+pillow==13.0.0
+requests==2.34.2

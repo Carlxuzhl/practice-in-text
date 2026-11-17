@@ -1,0 +1,15 @@
+{
+ "note": "Example spec for python -m evaluation.bootstrap: the main comparison and the alignment's own effect. Replace the run names with your evaluation runs (scripts/reproduce/05_evaluate.sh lists them in $WORK_DIR/data/evaluation_runs.txt). The policies seen through another reader or in text share their seed group.",
+ "instances": "configs/instances/confirmation.json",
+ "arms": {
+  "clean_aligned": {"group": "clean", "seeds": {"0": ["<run of clean_s0 with the aligned reader>"], "1": ["<run of clean_s1 with the aligned reader>"]}},
+  "clean_original": {"group": "clean", "seeds": {"0": ["<run of clean_s0 with the original reader>"], "1": ["<run of clean_s1 with the original reader>"]}},
+  "clean_text": {"group": "clean", "seeds": {"0": ["<run of clean_s0 in text>"], "1": ["<run of clean_s1 in text>"]}},
+  "direct_original": {"group": "direct", "seeds": {"0": ["<run of direct_s0 with the original reader>"], "1": ["<run of direct_s1 with the original reader>"]}}
+ },
+ "comparisons": {
+  "main: aligned reader vs direct training": ["clean_aligned", "direct_original"],
+  "alignment itself": ["clean_aligned", "clean_original"],
+  "text vs pixels (clean)": ["clean_text", "clean_original"]
+ }
+}

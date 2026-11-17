@@ -1,0 +1,10 @@
+{
+ "note": "Base models, downloaded from the Hugging Face Hub at these revisions into $MODELS_DIR/<dir>. Weights are not part of this repository.",
+ "policy": {"repo": "Qwen/Qwen3-8B", "revision": "b968826d9c46dd6066d109eabc6255188de91218", "dir": "Qwen3-8B"},
+ "reader": {"repo": "Qwen/Qwen3-VL-4B-Instruct", "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17", "dir": "Qwen3-VL-4B-Instruct"},
+ "reader_8b": {"repo": "Qwen/Qwen3-VL-8B-Instruct", "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b", "dir": "Qwen3-VL-8B-Instruct",
+               "optional": "only for the comparison with the larger unaligned reader"},
+ "reader_other_family": {"repo": "OpenGVLab/InternVL3-8B-hf", "revision": "259a3b64a14623c0ec91a045cb43f7c5af5fa6af", "dir": "InternVL3-8B-hf",
+                         "optional": "only for the recurrence check with a reader from another model family"},
+ "download_patterns": ["*.json", "*.safetensors", "*.txt", "*.jinja", "*.model", "*.py"]
+}

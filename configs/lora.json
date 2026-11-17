@@ -1,0 +1,14 @@
+{
+ "note": "LoRA hyperparameters, shared by policy training and reader alignment. One example per step, gradients accumulated; cosine schedule with warmup; the last checkpoint is kept.",
+ "lora_r": 16,
+ "lora_alpha": 32,
+ "lora_dropout": 0.05,
+ "targets": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+ "lr": 0.0001,
+ "epochs": 2,
+ "accumulate": 16,
+ "max_tokens": 10240,
+ "warmup": 0.03,
+ "weight_decay": 0.0,
+ "grad_clip": 1.0
+}

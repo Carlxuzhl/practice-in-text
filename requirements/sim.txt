@@ -1,0 +1,11 @@
+# The simulator side: episodes, text view, analysis, statistics and tests (Python 3.11).
+# Versions as used in the study. Playwright 1.61.0 is the last release whose Chromium runs on Ubuntu 20.04.
+playwright==1.61.0
+requests==2.34.2
+pillow==13.0.0
+# MobileGym's bench_env needs these (its own requirements say openai<2.25):
+openai==2.24.0
+opencc-python-reimplemented==0.1.7
+tqdm==4.70.1
+pytest==9.2.0
+pytest-xdist==3.8.0

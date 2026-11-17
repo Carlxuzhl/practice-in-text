@@ -1,0 +1,13 @@
+{
+ "note": "Policy settings used for every run with a policy model (practice, screenshots, evaluation).",
+ "thinking": true,
+ "max_tokens": {"thinking": 3000, "no_thinking": 200},
+ "sampling": {"temperature": 0.6, "top_p": 0.95, "top_k": 20},
+ "notes": {"max_chars": 100, "kept": 10},
+ "history_kept": 8,
+ "timeout_s": 600,
+ "stuck_after": 6,
+ "server": {"served_model_name": "policy", "max_model_len": 16384, "dtype": "bfloat16", "seed": 0, "max_lora_rank": 16,
+            "gpu_memory_utilization": {"beside_reader": 0.55, "alone": 0.85}},
+ "browser": {"viewport": [360, 800], "physical_size": [1080, 2400], "device_scale_factor": 3, "delay_after_action": 0.8}
+}
