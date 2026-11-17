@@ -172,4 +172,13 @@ MobileGym's data, and anything generated from it, stays under CC BY-NC 4.0.
 
 ## Citation
 
-To be added with the arXiv version.
+```bibtex
+@article{xu2026practice,
+  title   = {Practice in Text, Act in Pixels: Correcting Where Perception Fails},
+  author  = {Xu, Zhongling and Wang, Hairong},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026}
+}
+```
+
+The arXiv number will be added when the paper is online.
