@@ -1,6 +1,6 @@
 # Practice in Text, Act in Pixels: Correcting Where Perception Fails
 
-Code for the paper of the same title (arXiv link to be added).
+Code for the paper of the same title: [arXiv:2611.22722](https://arxiv.org/abs/2611.22722).
 
 GUI agents can practise cheaply on a text version of an interface and act on real screenshots through a
 vision-language *screen reader* that turns each screenshot into the same kind of list. Success drops sharply from text
@@ -176,9 +176,7 @@ MobileGym's data, and anything generated from it, stays under CC BY-NC 4.0.
 @article{xu2026practice,
   title   = {Practice in Text, Act in Pixels: Correcting Where Perception Fails},
   author  = {Xu, Zhongling and Wang, Hairong},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint arXiv:2611.22722},
   year    = {2026}
 }
 ```
-
-The arXiv number will be added when the paper is online.
