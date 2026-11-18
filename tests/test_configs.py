@@ -22,7 +22,7 @@ def test_experiment_numbers():
 
 def test_models_pinned():
     models = load("models")
-    for key in ("policy", "reader", "reader_8b", "reader_other_family"):
+    for key in ("policy", "reader", "reader_8b", "reader_other_family", "aligned_reader"):
         assert re.fullmatch(r"[0-9a-f]{40}", models[key]["revision"]), key
 
 

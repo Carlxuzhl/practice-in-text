@@ -1,6 +1,6 @@
 """Download the base models at the revisions in configs/models.json into $MODELS_DIR/<dir>. Weights are not part of this
 repository; this uses the Hugging Face Hub (pip install huggingface_hub).
-Usage: python scripts/download_models.py [policy reader reader_8b reader_other_family]   (default: policy reader)"""
+Usage: python scripts/download_models.py [policy reader reader_8b reader_other_family aligned_reader]   (default: policy reader)"""
 from __future__ import annotations
 
 import json

@@ -6,5 +6,7 @@
                "optional": "only for the comparison with the larger unaligned reader"},
  "reader_other_family": {"repo": "OpenGVLab/InternVL3-8B-hf", "revision": "259a3b64a14623c0ec91a045cb43f7c5af5fa6af", "dir": "InternVL3-8B-hf",
                          "optional": "only for the recurrence check with a reader from another model family"},
+ "aligned_reader": {"repo": "xuzhl/practice-in-text-aligned-reader", "revision": "d6768ed3462ccff8f0359b17ef3028ccdf124062",
+                    "dir": "practice-in-text-aligned-reader", "optional": "the study's aligned reader (a LoRA adapter on the reader), CC BY-NC 4.0"},
  "download_patterns": ["*.json", "*.safetensors", "*.txt", "*.jinja", "*.model", "*.py"]
 }
