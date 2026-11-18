@@ -1,7 +1,9 @@
-# Practice in Text, Act in Pixels: Correcting Where Perception Fails
+<h1 align="center">Practice in Text, Act in Pixels: Correcting Where Perception Fails</h1>
 
-[Paper (arXiv:2611.22722)](https://arxiv.org/abs/2611.22722) |
-[Aligned reader (Hugging Face)](https://huggingface.co/xuzhl/practice-in-text-aligned-reader)
+<p align="center">
+<a href="https://arxiv.org/abs/2611.22722"><img src="https://img.shields.io/badge/arXiv-2611.22722-b31b1b?logo=arxiv&amp;logoColor=white" alt="arXiv paper"></a>
+<a href="https://huggingface.co/xuzhl/practice-in-text-aligned-reader"><img src="https://img.shields.io/badge/Hugging%20Face-Aligned%20reader-ffd21e?logo=huggingface" alt="Aligned reader on Hugging Face"></a>
+</p>
 
 A GUI agent can practise cheaply on a text version of an app, then act on real screenshots through a *screen reader*:
 a vision-language model that turns each screenshot into the same kind of text. The reader misreads elements and lists
